@@ -1,0 +1,36 @@
+﻿@model CRUDWebApi_Client1.ViewModels.ProductViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+   @using (Html.BeginForm("Create", "Product", FormMethod.Post))
+   {
+       <table cellpadding="2" cellspacing="2">
+           <tr>
+               <td>@Html.LabelFor(m => m.product.Name)</td>
+               <td>@Html.TextBoxFor(m => m.product.Name)</td>
+           </tr>
+           <tr>
+               <td>@Html.LabelFor(m => m.product.Price)</td>
+               <td>@Html.TextBoxFor(m => m.product.Price)</td>
+           </tr>
+           <tr>
+               <td>@Html.LabelFor(m => m.product.Quantity)</td>
+               <td>@Html.TextBoxFor(m => m.product.Quantity)</td>
+           </tr>
+           <tr>
+               <td>&nbsp;</td>
+               <td><input type="submit" value="Save" /></td>
+           </tr>
+       </table>
+   }
+</body>
+</html>
