@@ -40,7 +40,7 @@ namespace CRUDWebApi_Client1.Controllers
         {
             ProductClient pc = new ProductClient();
             ProductViewModel pvm = new ProductViewModel();
-            pvm.product = pc.find(id);
+            // pvm.product = pc.find(id);
             return View("Index", pvm);
         }
     }
